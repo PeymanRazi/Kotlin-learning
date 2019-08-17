@@ -1,23 +1,27 @@
 package puresoft.org.kotlinlearning
 
-import androidx.appcompat.app.AppCompatActivity
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
 
 
+    @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button.setOnClickListener(){
+        button.setOnClickListener {
 
-            text.setText("sss")
+            text.text = "sss"
+
+            Toast.makeText(applicationContext, "fff", 10000).show()
 
         }
-
 
 
     }
