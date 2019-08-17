@@ -9,20 +9,30 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    private var resultMe: String = ""
 
     @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         button.setOnClickListener {
 
-            text.text = "sss"
+            this.resultMe = when (text.text.toString()) {
 
-            Toast.makeText(applicationContext, "fff", 10000).show()
+                "e", "w", "q" -> "<5"
+
+                "r", "t", "y" -> ">5"
+
+                else -> {
+                    "any things"
+                }
+            }
+
+            Toast.makeText(applicationContext, "result is: $resultMe", 2000).show()
 
         }
-
 
     }
 }
