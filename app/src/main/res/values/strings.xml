@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Kotlin Learning</string>
+    <string name="button">ok</string>
 </resources>
